@@ -5,94 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Banner PK VMF</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background:#000;
-  font-family:Arial,sans-serif;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:10px;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 .banner-wrapper {
-  width:100%;
-  max-width:768px;
-  margin:0 auto;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
 }
 .banner-container {
-  width:100%;
-  position:relative;
-  overflow:hidden;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .banner {
-  position:relative;
-  width:768px;
-  height:1365px;
-  background:url("images/vmf.PNG") no-repeat center center;
-  background-size:cover;
+  position: relative;
+  width: 768px;
+  height: 1365px;
+  background: url("images/vmf.PNG") no-repeat center center;
+  background-size: cover;
+  transform-origin: top left;
 }
 .circle {
-  position:absolute;
-  width:230px;
-  height:230px;
-  border-radius:50%;
-  overflow:hidden;
-  background:#222;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .circle img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  touch-action:none;
-  cursor:grab;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  touch-action: none;
+  cursor: grab;
 }
-.circle-left { bottom:546px; left:79px; }
-.circle-right { bottom:546px; right:79px; }
+.circle-left { bottom: 546px; left: 79px; }
+.circle-right { bottom: 546px; right: 79px; }
 
-.name { position:absolute; width:230px; height:40px; color:white; font-size:22px; font-weight:bold; text-align:center; line-height:40px; }
-.name-left { bottom:474px; left:80px; }
-.name-right { bottom:474px; right:80px; }
+.name {
+  position: absolute;
+  width: 230px;
+  height: 40px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+}
+.name-left { bottom: 474px; left: 80px; }
+.name-right { bottom: 474px; right: 80px; }
 
-.agency { position:absolute; width:250px; height:50px; color:white; font-size:20px; font-weight:bold; text-align:center; line-height:50px; }
-.agency-left { top:472px; left:37px; }
-.agency-right { top:472px; right:26px; }
+.agency {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+.agency-left { top: 472px; left: 37px; }
+.agency-right { top: 472px; right: 26px; }
 
-.round-booster { position:absolute; top:937px; width:100%; text-align:center; font-size:36px; font-weight:bold; color:#fff; text-shadow:2px 2px 4px black; }
-.date { position:absolute; top:420px; width:100%; text-align:center; font-size:22px; font-weight:bold; color:#fff; text-shadow:2px 2px 4px black; }
-.time { position:absolute; top:448px; width:100%; text-align:center; font-size:22px; font-weight:bold; color:#fff; text-shadow:2px 2px 4px black; }
+.round-booster {
+  position: absolute;
+  top: 937px;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px black;
+}
+
+.date {
+  position: absolute;
+  top: 420px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px black;
+}
+.time {
+  position: absolute;
+  top: 448px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px black;
+}
 
 .controls {
-  width:100%;
-  max-width:768px;
-  background:rgba(20,20,20,0.95);
-  padding:12px;
-  border-radius:10px;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  margin-top:4px;
+  width: 100%;
+  max-width: 768px;
+  background: rgba(20,20,20,0.95);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
 }
-.controls label { font-size:14px; margin-bottom:3px; }
-.controls input, .controls select { width:100%; padding:6px; border-radius:6px; border:none; }
+.controls label { font-size: 14px; margin-bottom: 3px; }
+.controls input, .controls select { width: 100%; padding: 6px; border-radius: 6px; border: none; }
+
 .download-btn {
-  margin-top:6px;
-  padding:10px 20px;
-  border:none;
-  background:#ff004c;
-  color:#fff;
-  font-size:16px;
-  font-weight:bold;
-  border-radius:6px;
-  cursor:pointer;
-  width:100%;
+  margin-top: 6px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff004c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
 }
-@media (max-width:480px) {
-  .controls { margin-top:2px; padding:10px; gap:5px; }
-  .download-btn { font-size:14px; padding:8px; }
+
+@media (max-width: 480px) {
+  .controls { margin-top: 2px; padding: 10px; gap: 5px; }
+  .download-btn { font-size: 14px; padding: 8px; }
 }
 </style>
 </head>
@@ -157,118 +210,103 @@ body {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
-  // ---- Update teks ----
-  function updateName(side) { document.getElementById("name-"+side).textContent = document.getElementById("input-"+side).value; }
-  function updateAgency(side) { document.getElementById("agency-"+side).textContent = document.getElementById("agency-input-"+side).value; }
+  // Update teks
+  function updateName(side) {
+    const value = document.getElementById("input-" + side).value;
+    document.getElementById("name-" + side).textContent = value;
+  }
+  function updateAgency(side) {
+    const value = document.getElementById("agency-input-" + side).value;
+    document.getElementById("agency-" + side).textContent = value;
+  }
   function updateRoundBooster() {
     const round = document.getElementById("round-input").value || "0";
     const booster = document.getElementById("booster-input").value;
-    document.getElementById("round-booster").textContent = round+" ROUND | "+booster+" BOOSTER";
+    document.getElementById("round-booster").textContent = round + " ROUND | " + booster + " BOOSTER";
   }
   function updateDateTime() {
-    const day=document.getElementById("day-input").value||"Senin";
-    const date=document.getElementById("date-input").value||"19";
-    const month=document.getElementById("month-input").value||"September";
-    const year=document.getElementById("year-input").value||"2025";
-    const time=document.getElementById("time-input").value||"20:00 WIB";
-    document.getElementById("date").textContent=`${day}, ${date} ${month} ${year}`;
-    document.getElementById("time").textContent=time;
+    const day = document.getElementById("day-input").value || "Senin";
+    const date = document.getElementById("date-input").value || "19";
+    const month = document.getElementById("month-input").value || "September";
+    const year = document.getElementById("year-input").value || "2025";
+    const time = document.getElementById("time-input").value || "20:00 WIB";
+
+    document.getElementById("date").textContent = `${day}, ${date} ${month} ${year}`;
+    document.getElementById("time").textContent = time;
   }
 
-  // ---- State gambar ----
+  // Download banner
+  function downloadBanner() {
+    const controls = document.querySelector(".controls");
+    controls.style.display = "none";
+    const banner = document.getElementById("banner");
+    const oldTransform = banner.style.transform;
+    banner.style.transform = "none";
+
+    html2canvas(banner, { scale: 2, useCORS: true }).then(canvas => {
+      const link = document.createElement("a");
+      link.download = "banner-pk.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+      controls.style.display = "block";
+      banner.style.transform = oldTransform;
+    });
+  }
+
+  // Resize banner responsif
+  function resizeBanner() {
+    const banner = document.querySelector('.banner');
+    const wrapper = document.querySelector('.banner-wrapper');
+    const container = document.querySelector('#banner-container');
+    const scale = wrapper.clientWidth / 768;
+    banner.style.transform = `scale(${scale})`;
+    container.style.height = `${1365 * scale}px`;
+  }
+  window.addEventListener('resize', resizeBanner);
+  window.addEventListener('load', resizeBanner);
+
+  // Zoom & drag image
   const imageState = {
-    left: { scale:1, offsetX:0, offsetY:0, startX:0, startY:0, dragging:false, lastDist:0 },
-    right:{ scale:1, offsetX:0, offsetY:0, startX:0, startY:0, dragging:false, lastDist:0 }
+    left: { scale: 1, startX:0, startY:0, offsetX:0, offsetY:0, dragging:false },
+    right: { scale: 1, startX:0, startY:0, offsetX:0, offsetY:0, dragging:false }
   };
+  function updateImage(side) {
+    const fileInput = document.getElementById("upload-" + side);
+    const circle = document.getElementById("circle-" + side);
 
-  // ---- Upload & Zoom/Drag ----
-  function updateImage(side){
-    const file=document.getElementById("upload-"+side).files[0];
-    if(!file) return;
-    const reader=new FileReader();
-    reader.onload=function(e){
-      const circle=document.getElementById("circle-"+side);
-      circle.innerHTML=`<img src="${e.target.result}" id="img-${side}">`;
-      const img=document.getElementById("img-"+side);
+    if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        circle.innerHTML = `<img src="${e.target.result}" id="img-${side}" style="transform: translate(0px, 0px) scale(1);">`;
+        const img = document.getElementById(`img-${side}`);
 
-      // ---- Mouse wheel zoom ----
-      img.onwheel=function(event){
-        event.preventDefault();
-        imageState[side].scale += -event.deltaY*0.001;
-        if(imageState[side].scale<0.1) imageState[side].scale=0.1;
-        if(imageState[side].scale>5) imageState[side].scale=5;
-        img.style.transform=`translate(${imageState[side].offsetX}px,${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
-      };
-
-      // ---- Drag mouse ----
-      img.onpointerdown=function(e){
-        imageState[side].dragging=true;
-        imageState[side].startX=e.clientX-imageState[side].offsetX;
-        imageState[side].startY=e.clientY-imageState[side].offsetY;
-        img.setPointerCapture(e.pointerId);
-      };
-      img.onpointermove=function(e){
-        if(!imageState[side].dragging) return;
-        imageState[side].offsetX=e.clientX-imageState[side].startX;
-        imageState[side].offsetY=e.clientY-imageState[side].startY;
-        img.style.transform=`translate(${imageState[side].offsetX}px,${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
-      };
-      img.onpointerup=img.onpointerleave=function(e){ imageState[side].dragging=false; img.releasePointerCapture(e.pointerId); };
-
-      // ---- Touch pinch zoom ----
-      img.addEventListener("touchstart", function(e){
-        if(e.touches.length==2){
-          e.preventDefault();
-          imageState[side].lastDist=getDistance(e.touches);
-        } else if(e.touches.length==1){
-          imageState[side].dragging=true;
-          const touch=e.touches[0];
-          imageState[side].startX=touch.clientX-imageState[side].offsetX;
-          imageState[side].startY=touch.clientY-imageState[side].offsetY;
-        }
-      });
-      img.addEventListener("touchmove", function(e){
-        if(e.touches.length==2){
-          e.preventDefault();
-          const dist=getDistance(e.touches);
-          let scaleChange=dist/imageState[side].lastDist;
-          imageState[side].scale*=scaleChange;
+        img.onwheel = function(event) {
+          event.preventDefault();
+          imageState[side].scale += event.deltaY * -0.001;
           if(imageState[side].scale<0.1) imageState[side].scale=0.1;
           if(imageState[side].scale>5) imageState[side].scale=5;
-          imageState[side].lastDist=dist;
-          img.style.transform=`translate(${imageState[side].offsetX}px,${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
-        } else if(e.touches.length==1 && imageState[side].dragging){
-          const touch=e.touches[0];
-          imageState[side].offsetX=touch.clientX-imageState[side].startX;
-          imageState[side].offsetY=touch.clientY-imageState[side].startY;
-          img.style.transform=`translate(${imageState[side].offsetX}px,${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
-        }
-      });
-      img.addEventListener("touchend", function(e){
-        if(e.touches.length<2) imageState[side].dragging=false;
-      });
-    };
-    reader.readAsDataURL(file);
-  }
+          img.style.transform = `translate(${imageState[side].offsetX}px, ${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
+        };
 
-  function getDistance(touches){
-    const dx=touches[0].clientX-touches[1].clientX;
-    const dy=touches[0].clientY-touches[1].clientY;
-    return Math.hypot(dx,dy);
-  }
-
-  // ---- Download banner ----
-  function downloadBanner(){
-    const controls=document.querySelector(".controls");
-    controls.style.display="none";
-    const banner=document.getElementById("banner");
-    html2canvas(banner,{scale:2, useCORS:true}).then(canvas=>{
-      const link=document.createElement("a");
-      link.download="banner-pk.png";
-      link.href=canvas.toDataURL("image/png");
-      link.click();
-      controls.style.display="block";
-    });
+        img.onpointerdown = function(e){
+          imageState[side].dragging=true;
+          imageState[side].startX = e.clientX - imageState[side].offsetX;
+          imageState[side].startY = e.clientY - imageState[side].offsetY;
+          img.setPointerCapture(e.pointerId);
+        };
+        img.onpointermove = function(e){
+          if(!imageState[side].dragging) return;
+          imageState[side].offsetX = e.clientX - imageState[side].startX;
+          imageState[side].offsetY = e.clientY - imageState[side].startY;
+          img.style.transform = `translate(${imageState[side].offsetX}px, ${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
+        };
+        img.onpointerup = img.onpointerleave = function(e){
+          imageState[side].dragging=false;
+          img.releasePointerCapture(e.pointerId);
+        };
+      }
+      reader.readAsDataURL(fileInput.files[0]);
+    }
   }
 </script>
 </body>
