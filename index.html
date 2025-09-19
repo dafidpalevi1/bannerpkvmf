@@ -1,162 +1,153 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banner PK VMF</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner PK VMF</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.banner-wrapper {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.banner-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.banner {
+  position: relative;
+  width: 768px;
+  height: 1365px;
+  background: url("images/vmf.PNG") no-repeat center center;
+  background-size: cover;
+  transform-origin: top left;
+}
+.circle {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  touch-action: none;
+  cursor: grab;
+}
+.circle-left { bottom: 546px; left: 79px; }
+.circle-right { bottom: 546px; right: 79px; }
 
-    body {
-      background: #000;
-      font-family: Arial, sans-serif;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
+.name {
+  position: absolute;
+  width: 230px;
+  height: 40px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+}
+.name-left { bottom: 474px; left: 80px; }
+.name-right { bottom: 474px; right: 80px; }
 
-    .banner-wrapper {
-      width: 100%;
-      max-width: 768px;
-      margin: 0 auto;
-    }
+.agency {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+.agency-left { top: 472px; left: 37px; }
+.agency-right { top: 472px; right: 26px; }
 
-    .banner-container {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
+.round-booster {
+  position: absolute;
+  top: 937px;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px black;
+}
 
-    .banner {
-      position: relative;
-      width: 768px;
-      height: 1365px;
-      background: url("images/vmf.PNG") no-repeat center center;
-      background-size: cover;
-      transform-origin: top left;
-    }
+.date {
+  position: absolute;
+  top: 420px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px black;
+}
+.time {
+  position: absolute;
+  top: 448px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px black;
+}
 
-    .circle {
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.controls {
+  width: 100%;
+  max-width: 768px;
+  background: rgba(20,20,20,0.95);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+.controls label { font-size: 14px; margin-bottom: 3px; }
+.controls input, .controls select { width: 100%; padding: 6px; border-radius: 6px; border: none; }
 
-    .circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.download-btn {
+  margin-top: 6px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff004c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
 
-    .circle-left { bottom: 546px; left: 79px; }
-    .circle-right { bottom: 546px; right: 79px; }
-
-    .name {
-      position: absolute;
-      width: 230px;
-      height: 40px;
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 40px;
-    }
-
-    .name-left { bottom: 474px; left: 80px; }
-    .name-right { bottom: 474px; right: 80px; }
-
-    .agency {
-      position: absolute;
-      width: 250px;
-      height: 50px;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 50px;
-    }
-
-    .agency-left { top: 472px; left: 37px; }
-    .agency-right { top: 472px; right: 26px; }
-
-    .round-booster {
-      position: absolute;
-      top: 937px;
-      width: 100%;
-      text-align: center;
-      font-size: 36px;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 2px 2px 4px black;
-    }
-
-    .date {
-      position: absolute;
-      top: 420px;
-      width: 100%;
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-      text-shadow: 2px 2px 4px black;
-    }
-
-    .time {
-      position: absolute;
-      top: 448px;
-      width: 100%;
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-      text-shadow: 2px 2px 4px black;
-    }
-
-    .controls {
-      width: 100%;
-      max-width: 768px;
-      background: rgba(20,20,20,0.95);
-      padding: 12px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .controls label { font-size: 14px; margin-bottom: 3px; }
-    .controls input, .controls select { width: 100%; padding: 6px; border-radius: 6px; border: none; }
-
-    .download-btn {
-      margin-top: 6px;
-      padding: 10px 20px;
-      border: none;
-      background: #ff004c;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    @media (max-width: 480px) {
-      .controls { margin-top: 2px; padding: 10px; gap: 5px; }
-      .download-btn { font-size: 14px; padding: 8px; }
-    }
-  </style>
+@media (max-width: 480px) {
+  .controls { margin-top: 2px; padding: 10px; gap: 5px; }
+  .download-btn { font-size: 14px; padding: 8px; }
+}
+</style>
 </head>
 <body>
 
@@ -180,13 +171,11 @@
 </div>
 
 <div class="controls">
-  <!-- Agency paling atas -->
   <label>Agency Kiri:</label>
   <input type="text" id="agency-input-left" placeholder="Isi nama agency" oninput="updateAgency('left')">
   <label>Agency Kanan:</label>
   <input type="text" id="agency-input-right" placeholder="Isi nama agency" oninput="updateAgency('right')">
 
-  <!-- Menu lainnya -->
   <label>Hari:</label>
   <input type="text" id="day-input" placeholder="Contoh: Senin" oninput="updateDateTime()">
   <label>Tanggal:</label>
@@ -208,7 +197,6 @@
   <label>Upload Foto Kanan:</label>
   <input type="file" id="upload-right" accept="image/*" onchange="updateImage('right')">
 
-  <!-- Round & Booster -->
   <label>Jumlah Round:</label>
   <input type="number" id="round-input" placeholder="Isi jumlah round" oninput="updateRoundBooster()">
   <label>Booster:</label>
@@ -220,23 +208,22 @@
   <button class="download-btn" onclick="downloadBanner()">Download Banner</button>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
+  // Update teks
   function updateName(side) {
     const value = document.getElementById("input-" + side).value;
     document.getElementById("name-" + side).textContent = value;
   }
-
   function updateAgency(side) {
     const value = document.getElementById("agency-input-" + side).value;
     document.getElementById("agency-" + side).textContent = value;
   }
-
   function updateRoundBooster() {
     const round = document.getElementById("round-input").value || "0";
     const booster = document.getElementById("booster-input").value;
     document.getElementById("round-booster").textContent = round + " ROUND | " + booster + " BOOSTER";
   }
-
   function updateDateTime() {
     const day = document.getElementById("day-input").value || "Senin";
     const date = document.getElementById("date-input").value || "19";
@@ -248,38 +235,25 @@
     document.getElementById("time").textContent = time;
   }
 
-  function updateImage(side) {
-    const fileInput = document.getElementById("upload-" + side);
-    const circle = document.getElementById("circle-" + side);
-
-    if (fileInput.files && fileInput.files[0]) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        circle.innerHTML = "<img src='" + e.target.result + "'>";
-      };
-      reader.readAsDataURL(fileInput.files[0]);
-    }
-  }
-
+  // Download banner
   function downloadBanner() {
     const controls = document.querySelector(".controls");
     controls.style.display = "none";
-
     const banner = document.getElementById("banner");
     const oldTransform = banner.style.transform;
-    banner.style.transform = "none"; // hapus sementara scale
+    banner.style.transform = "none";
 
     html2canvas(banner, { scale: 2, useCORS: true }).then(canvas => {
       const link = document.createElement("a");
       link.download = "banner-pk.png";
       link.href = canvas.toDataURL("image/png");
       link.click();
-
       controls.style.display = "block";
-      banner.style.transform = oldTransform; // kembalikan scale
+      banner.style.transform = oldTransform;
     });
   }
 
+  // Resize banner responsif
   function resizeBanner() {
     const banner = document.querySelector('.banner');
     const wrapper = document.querySelector('.banner-wrapper');
@@ -288,11 +262,52 @@
     banner.style.transform = `scale(${scale})`;
     container.style.height = `${1365 * scale}px`;
   }
-
   window.addEventListener('resize', resizeBanner);
   window.addEventListener('load', resizeBanner);
-</script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  // Zoom & drag image
+  const imageState = {
+    left: { scale: 1, startX:0, startY:0, offsetX:0, offsetY:0, dragging:false },
+    right: { scale: 1, startX:0, startY:0, offsetX:0, offsetY:0, dragging:false }
+  };
+  function updateImage(side) {
+    const fileInput = document.getElementById("upload-" + side);
+    const circle = document.getElementById("circle-" + side);
+
+    if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        circle.innerHTML = `<img src="${e.target.result}" id="img-${side}" style="transform: translate(0px, 0px) scale(1);">`;
+        const img = document.getElementById(`img-${side}`);
+
+        img.onwheel = function(event) {
+          event.preventDefault();
+          imageState[side].scale += event.deltaY * -0.001;
+          if(imageState[side].scale<0.1) imageState[side].scale=0.1;
+          if(imageState[side].scale>5) imageState[side].scale=5;
+          img.style.transform = `translate(${imageState[side].offsetX}px, ${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
+        };
+
+        img.onpointerdown = function(e){
+          imageState[side].dragging=true;
+          imageState[side].startX = e.clientX - imageState[side].offsetX;
+          imageState[side].startY = e.clientY - imageState[side].offsetY;
+          img.setPointerCapture(e.pointerId);
+        };
+        img.onpointermove = function(e){
+          if(!imageState[side].dragging) return;
+          imageState[side].offsetX = e.clientX - imageState[side].startX;
+          imageState[side].offsetY = e.clientY - imageState[side].startY;
+          img.style.transform = `translate(${imageState[side].offsetX}px, ${imageState[side].offsetY}px) scale(${imageState[side].scale})`;
+        };
+        img.onpointerup = img.onpointerleave = function(e){
+          imageState[side].dragging=false;
+          img.releasePointerCapture(e.pointerId);
+        };
+      }
+      reader.readAsDataURL(fileInput.files[0]);
+    }
+  }
+</script>
 </body>
 </html>
